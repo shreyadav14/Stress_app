@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+body{
+  margin:0;
+  background:#dfe8cc;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Center dashboard like mobile screen */
+.dashboard{
+  max-width:420px;
+  margin:auto;
+  padding:20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Card style like design */
+.card{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom:20px;
+  text-align:center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Header */
+.header{
+  text-align:center;
+  margin-bottom:20px;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1{
+  color:#5b7f3a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button */
+button{
+  width:100%;
+  padding:12px;
+  background:#6c8f4e;
+  border:none;
+  color:white;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+
+button:hover{
+  background:#4e6e34;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:15px;
+  background:#1f252b;
+  color:white;
+  margin-top:20px;
 }
