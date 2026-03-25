@@ -1,3 +1,5 @@
+#introduction
+This is an stress app, with frontend(reac,CSS,HTML,JavaScipt), and simple data manipulation using, pandas, numpy, Scikit-learn etc, and basic backend.
 <<<<<<< HEAD
 # Getting Started with Create React App
 
