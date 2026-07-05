@@ -2,22 +2,35 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from enum import Enum
+import os
 import joblib
 import pandas as pd
 import logging
 from pathlib import Path
+from auth_routes import router as auth_router
+from history_routes import router as history_router
+
+
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
 
 app = FastAPI()
+
+
+allowed_origins = os.environ.get(
+    "ALLOWED_ORIGINS", "http://localhost:5173"
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(history_router)
+app.include_router(auth_router)
 # Load trained model from the backend folder regardless of launch directory.
 MODEL_PATH = Path(__file__).resolve().parent / "final_model.pkl"
 model = joblib.load(MODEL_PATH)

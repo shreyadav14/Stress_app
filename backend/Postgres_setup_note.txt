@@ -1,0 +1,7 @@
+Run this once, in your backend folder, before deploying:
+
+    pip install psycopg2-binary
+
+This is the driver SQLAlchemy needs to talk to Postgres (Supabase/Render's
+managed database). SQLite doesn't need it, which is why it wasn't installed
+before now.
