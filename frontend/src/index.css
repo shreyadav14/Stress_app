@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+background:
+radial-gradient(circle at 15% 10%, rgba(0,217,255,.14), transparent 30%),
+radial-gradient(circle at 85% 15%, rgba(124,58,237,.14), transparent 28%),
+radial-gradient(circle at 50% 100%, rgba(0,217,255,.05), transparent 35%),
+linear-gradient(180deg,#020617,#030712,#020617);
+
+color:white;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+}
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+
+  background-image: radial-gradient(
+    circle,
+    rgba(255,255,255,0.18) 1px,
+    transparent 1px
+  );
+
+  background-size: 80px 80px;
+  opacity: 0.18;
+}
+.section-divider {
+  width: 75%;
+  height: 1px;
+  margin: 90px auto;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(25,211,255,.45),
+    rgba(139,92,246,.45),
+    transparent
+  );
+}
+.ai-button {
+  padding: 16px 34px;
+  border: none;
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #00D9FF,
+    #6D5DFB,
+    #8B5CF6
+  );
+
+  background-size: 200% 200%;
+  animation: gradientMove 6s linear infinite;
+
+  transition: .3s;
+}
+
+.ai-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(25,211,255,.35);
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.glass-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(22px);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.25),
+    0 0 40px rgba(25,211,255,.06);
+
+  transition: .35s;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(25,211,255,.25);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.35),
+    0 0 60px rgba(25,211,255,.15);
+}
+::selection{
+    background:#00D9FF;
+    color:#030712;
+}
+
+.gradient-text{
+
+background:linear-gradient(
+90deg,
+#00D9FF,
+#8B5CF6
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+font-weight:700;
+
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#020617;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(#00D9FF,#8B5CF6);
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#00D9FF;
+}
