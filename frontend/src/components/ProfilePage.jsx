@@ -1,4 +1,4 @@
-import "./Profilepage.css";
+import "./ProfilePage.css";
 import { useState, useEffect, useMemo } from "react";
 import { FaSignOutAlt, FaFire, FaChartLine, FaMoon } from "react-icons/fa";
 import { useAuth } from "./AuthContext";

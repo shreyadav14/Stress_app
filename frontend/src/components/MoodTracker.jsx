@@ -1,4 +1,4 @@
-import "./Moodtracker.css";
+import "./MoodTracker.css";
 import { useState, useMemo, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { MOODS, getMoodInfo, dateKey } from "./moodHistory";
