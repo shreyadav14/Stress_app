@@ -12,7 +12,7 @@ import Dashboard from "./components/Dashboard";
 import AuthPage from "./components/AuthPage";
 import MoodTracker from "./components/MoodTracker";
 import RelaxZone from "./components/RelaxZone";
-import ProfilePage from "./components/ProfilepPage";
+import ProfilePage from "./components/ProfilePage";
 import { useAuth } from "./components/AuthContext";
 
 function App() {
